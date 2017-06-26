@@ -180,7 +180,7 @@ epithelial cell, stromal cell or
 lymphocyte) or a cellular phenotype (such as cell death, interphase,
 metaphase). This can be achieved by supervised machine learning approaches,
 such as Support Vector Machines (SVM) or Random Forests (RF), 
-where the classification rules are infered in a fully automatic way from
+where the classification rules are inferred in a fully automatic way from
 annotated samples. Some of the features will also be exported directly, as they
 are themselves physiologically relevant (such as cell size). 
 Regarding the {\em tissue level}, the plan is to detect the tumor,
@@ -414,6 +414,9 @@ Secondly, on a technical aspect, there are many technical and methodological cha
   per slide and we have hundreds of slides. 
   Thirdly, on a statistical aspect, we detect millions of nuclei for one patient. How do we transcribe meaningfully the information of a density distribution into a finite number of datapoints.
   
+\subsection{Future work}
+The pipeline for extracting information at the cellular level is currently working, i.e. given a patient's slide I have as an output a matrix of size \textit{number of segmented cell} $\times$ \textit{number of features}. Extracting all this information takes roughly one hour per slide and this seems to be linear in the size of the slide. The next step is precisely defining which features to include in the pipeline and how, from a statistical point of view, shall I transform this information into a useful high-dimensionnal vector. Finnaly the last part, i.e. finding treatment effect should be quite straight forward as it is a  supervised learning for regression problem.
+
 \section{DataSet 2}
 
 Our second data set consists of 198 slides from a recently published study on bladder cancer
@@ -460,7 +463,7 @@ segmentation images. Finaly, I would like to thank the League
 Nationnal Contre Le Cancer who are founding me during the 
 course of this PhD.
 
- \newpage
+ %\newpage
  
 
 
